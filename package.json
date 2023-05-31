@@ -4,7 +4,9 @@
   "description": "A Rollup plugin to concatenate files",
   "main": "index.js",
   "keywords": [
-    "rollup-plugin"
+    "rollup-plugin",
+    "rollup",
+    "concat"
   ],
   "scripts": {
     "test": "jest index.spec.js"
