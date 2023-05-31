@@ -3,16 +3,22 @@
   "version": "1.0.0",
   "description": "A Rollup plugin to concatenate files",
   "main": "index.js",
-  "type": "module",
   "keywords": [
     "rollup-plugin"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest index.spec.js"
   },
+  "files": [
+    "index.js",
+    "package.json"
+  ],
   "author": "Maurice Downes",
   "license": "ISC",
   "dependencies": {
     "rollup-pluginutils": "^2.8.2"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }

@@ -1,8 +1,8 @@
-import { createFilter } from 'rollup-pluginutils';
-import { readFileSync, writeFileSync } from 'fs';
-import { resolve } from 'path';
+const createFilter = require('rollup-pluginutils').createFilter
+const fs = require('fs');
+const path = require('path');
 
-export default function concat(options = {}) {
+function concat(options = {}) {
     const filter = createFilter(options.include, options.exclude);
     const groupedFiles = options.groupedFiles || [];
 
@@ -20,14 +20,18 @@ export default function concat(options = {}) {
 
                 for (const file of files) {
                     if (filter(file)) {
-                        const content = readFileSync(file, 'utf8');
+                        console.log("readFileSync")
+                        const content = fs.readFileSync(file, 'utf8');
                         code += `${content}\n`;
                     }
                 }
 
-                const outputFile = resolve(process.cwd(), group.outputFile);
-                writeFileSync(outputFile, code, 'utf8');
+                const outputFile = path.resolve(process.cwd(), group.outputFile);
+                console.log("calling writeFileSync" + code)
+                fs.writeFileSync(outputFile, code, 'utf8');
             }
         },
     };
 }
+
+module.exports = concat;
