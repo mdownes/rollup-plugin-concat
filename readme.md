@@ -5,7 +5,7 @@ A Rollup plugin which concatenates files together for further use by the rollup 
 
 Using npm:
 
-npm install rollup-plugin-concat --save-dev
+```npm install rollup-plugin-concat --save-dev```
 
 ### Usage
 
