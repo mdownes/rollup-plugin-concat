@@ -1,9 +1,5 @@
 ### rollup-plugin-concat
-A Rollup plugin which concatenates files together for further use by the rollu bundling process.
-
-### Requirements
-
-This plugin requires an LTS Node version (v14.0.0+) and Rollup v1.20.0+.
+A Rollup plugin which concatenates files together for further use by the rollup bundling process.
 
 ### Install
 
@@ -15,7 +11,8 @@ npm install rollup-plugin-concat --save-dev
 
 Create a rollup.config.js configuration file and import the plugin:
 
-```import replace from 'rollup-plugin-concat';
+```
+import replace from 'rollup-plugin-concat';
 
 export default {
     input: 'src/index.js',
