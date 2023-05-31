@@ -20,14 +20,12 @@ function concat(options = {}) {
 
                 for (const file of files) {
                     if (filter(file)) {
-                        console.log("readFileSync")
                         const content = fs.readFileSync(file, 'utf8');
                         code += `${content}\n`;
                     }
                 }
 
                 const outputFile = path.resolve(process.cwd(), group.outputFile);
-                console.log("calling writeFileSync" + code)
                 fs.writeFileSync(outputFile, code, 'utf8');
             }
         },
