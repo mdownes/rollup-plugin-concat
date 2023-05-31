@@ -13,7 +13,14 @@
     "index.js",
     "package.json"
   ],
-  "author": "Maurice Downes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdownes/rollup-plugin-concat.git"
+  },
+  "author": {
+    "name": "Maurice Downes",
+    "url": "https://advancedfontends.com"
+  },
   "license": "ISC",
   "dependencies": {
     "rollup-pluginutils": "^2.8.2"
