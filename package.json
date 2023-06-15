@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-concat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Rollup plugin to concatenate files",
   "main": "index.js",
   "keywords": [

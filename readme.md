@@ -12,7 +12,7 @@ Using npm:
 Create a rollup.config.js configuration file and import the plugin:
 
 ```
-import replace from 'rollup-plugin-concat';
+import concat from 'rollup-plugin-concat';
 
 export default {
     input: 'src/index.js',
