@@ -26,10 +26,21 @@ function concat(options = {}) {
                 }
 
                 const outputFile = path.resolve(process.cwd(), group.outputFile);
-                fs.writeFileSync(outputFile, code, 'utf8');
+                writeFileWithDirs(outputFile, code);
             }
         },
     };
+}
+
+function writeFileWithDirs(outputFile, code) {
+    // Get the directory path from the output file
+    const dir = path.dirname(outputFile);
+
+    // Create the directory if it doesn't exist
+    fs.mkdirSync(dir, { recursive: true });
+
+    // Write the file
+    fs.writeFileSync(outputFile, code, 'utf8');
 }
 
 module.exports = concat;
